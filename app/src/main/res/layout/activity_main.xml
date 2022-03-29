@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/operand_one_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/type_operand_one_hint"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <EditText
+        android:id="@+id/operand_two_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/type_operand_two_hint"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/operation_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="onAdd"
+            android:text="@string/add_operation_text"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/operation_sub_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/operation_add_btn"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="onSub"
+            android:text="@string/sub_operation_text"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/operation_div_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/operation_add_btn"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="onDiv"
+            android:text="@string/div_operation_text"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/operation_mul_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/operation_add_btn"
+            android:layout_toEndOf="@id/operation_add_btn"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="onMul"
+            android:text="@string/mul_operation_text"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/operation_pow_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/operation_mul_btn"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="onPow"
+            android:text="@string/pow_operation_text"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/operation_fac_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/operation_pow_btn"
+            android:layout_toEndOf="@id/operation_mul_btn"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="onFac"
+            android:text="@string/fac_operation_text"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/operation_log_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/operation_pow_btn"
+            android:backgroundTint="@color/purple_500"
+            android:onClick="onLog"
+            android:text="@string/log_operation_text"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/operation_result_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="32sp" />
+
+</LinearLayout>
