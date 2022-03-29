@@ -33,6 +33,11 @@ public class Calculator {
     }
 
     private double factorial(double n) {
+
+        if (n < 0) {
+            return Double.NaN;
+        }
+
         double fact = 1;
         for (int i = 2; i <= n; i++) {
             fact = fact * i;
